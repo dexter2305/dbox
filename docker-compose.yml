@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  dropbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dropbox  
+    environment:
+      UID: $myuid
+      GID: $mygid
+    volumes:
+      - $PWD/dbox/config:/dbox/.dropbox
+      - $PWD/dbox/drive:/dbox/Dropbox
+    hostname: $myhostname

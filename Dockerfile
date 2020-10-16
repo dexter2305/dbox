@@ -8,13 +8,13 @@ RUN apt-get update \
     && wget https://www.dropbox.com/download?dl=packages/dropbox.py -O /usr/local/bin/dropbox-cli \
     && chmod +x /usr/local/bin/dropbox-cli
 
-ADD init.sh /init
+ADD bin/init.sh /init
 RUN chmod +x /init
 
-ADD start.sh /start.sh
+ADD bin/start.sh /start.sh
 RUN chmod +x /start.sh
 
-ADD dropbox-status.sh /usr/local/bin/dropbox-status
+ADD bin/dropbox-status.sh /usr/local/bin/dropbox-status
 RUN chmod +x /usr/local/bin/dropbox-status
 
 WORKDIR /dbox

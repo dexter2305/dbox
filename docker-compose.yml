@@ -9,6 +9,6 @@ services:
       UID: $myuid
       GID: $mygid
     volumes:
-      - $PWD/dbox/config:/dbox/.dropbox
-      - $PWD/dbox/drive:/dbox/Dropbox
+      - $PWD/app/config:/dbox/.dropbox
+      - $PWD/app/drive:/dbox/Dropbox
     hostname: $myhostname

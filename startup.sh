@@ -1,5 +1,13 @@
 #! /bin/bash
 
+
+#########################
+
+# Script to startup dbox
+
+#########################
+
+
 envFileName="run.env"
 applicationDirName="app"
 

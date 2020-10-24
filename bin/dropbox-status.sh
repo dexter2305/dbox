@@ -6,7 +6,7 @@ do
         CUR="$(dropbox-cli status)";
         if [ "$STORED" != "$CUR" ]; then
             STORED="$CUR"
-            echo "${STORED}"
+            echo $(date)" - ${STORED}"
         fi
     fi
     sleep 5

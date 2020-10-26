@@ -1,5 +1,13 @@
 FROM ubuntu:19.10
 
+#begin: install & configure tzdata for setting host timezone
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y --no-install-recommends tzdata \
+    && rm -rf /var/lib/apt/lists/*
+RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && dpkg-reconfigure --frontend noninteractive tzdata
+#end: install & configure tzdata for setting host timezone
+
 # If get ImportError: xxxxxxx.xxx during building, can search for the package to install here:
 # https://packages.debian.org/search?mode=filename&suite=buster&section=all&arch=i386&searchon=contents&keywords=xxxxxxx
 RUN apt-get update \

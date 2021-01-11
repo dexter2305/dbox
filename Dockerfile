@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu
 
 #begin: install & configure tzdata for setting host timezone
 ENV DEBIAN_FRONTEND=noninteractive
